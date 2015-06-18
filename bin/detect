@@ -2,7 +2,7 @@
 
 require 'pathname'
 
-if Pathname.new(ARGV.first).join("Gemfile").exist?
+if Pathname.new(ARGV.first).join(ENV['APP_SUBDIR'], "Gemfile").exist?
   puts "Ruby"
   exit 0
 else
