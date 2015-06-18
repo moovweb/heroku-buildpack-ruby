@@ -11,6 +11,7 @@ module LanguagePack
   # @return [LanguagePack] the {LanguagePack} detected
   def self.detect(*args)
     Instrument.instrument 'detect' do
+      puts "NEW DETECT DIR:", ShellHelpers.user_env_hash['APP_SUBDIR']
       Dir.chdir File.join(args.first, ShellHelpers.user_env_hash['APP_SUBDIR'] || '')
 
       pack = [ NoLockfile, Rails5, Rails42, Rails41, Rails4, Rails3, Rails2, Rack, Ruby ].detect do |klass|

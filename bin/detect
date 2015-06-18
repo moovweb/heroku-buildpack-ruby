@@ -2,6 +2,9 @@
 
 require 'pathname'
 
+puts "INSIDE <DETECT>"
+puts "APP_SUBDIR", ENV["APP_SUBDIR"]
+puts Pathname.new(ARGV.first).join(ENV['APP_SUBDIR'], "Gemfile")
 if Pathname.new(ARGV.first).join(ENV['APP_SUBDIR'], "Gemfile").exist?
   puts "Ruby"
   exit 0
