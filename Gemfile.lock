@@ -42,7 +42,7 @@ GEM
     parallel_tests (0.13.1)
       parallel
     progress (2.4.0)
-    rake (10.0.4)
+    rake (13.0.1)
     repl_runner (0.0.3)
       activesupport
     rest-client (1.7.2)
